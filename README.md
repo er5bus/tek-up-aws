@@ -15,7 +15,7 @@ Implement the architecture below knowing that you must :
        o IAM instance profile : LabInstanceProfile
        o User data:
 
-```
+```bash
 #!/bin/bash
 yum update -y
 yum -y install git
@@ -30,9 +30,13 @@ instances and then copy the DNS name of your Load Balancer into the browser to d
 World!"
 Add **/docs** to your URL to display the functions offered by your API. Run the
 write to disk function as follows:
-"path": "/home/ec2-user",
-"file_name": "my_file.txt",
-"content": "Hello!"
+```json
+{
+    "path": "/home/ec2-user",
+    "file_name": "my_file.txt",
+    "content": "Hello!"
+}
+```
 Then test the read function from the disc to display the contents of the file you created. Repeat the test
 of the read function. What do you find? Explain.
 Propose a solution using the existing functions.
